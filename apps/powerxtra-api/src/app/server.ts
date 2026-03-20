@@ -1,6 +1,8 @@
 import cors from "cors";
 import express from "express";
-import { AlbumRoutes, ArtistRoutes, PlaylistRoutes, TrackRoutes } from "./routers";
+import { AdvertRoutes, AlbumRoutes, ArtistRoutes,
+  NewsRoutes, PlaylistRoutes, ProgrammeRoutes,
+  TrackRoutes } from "./routers";
 import { ErrorHandler } from "../error-handler";
 import { StreamRoutes } from "./routers/radio-stream-routes/radio-stream.routes";
 import { AuthRoutes } from "./auths";
@@ -26,7 +28,8 @@ app.use("/api", [ AuthRoutes ]);
 // Main routes start here
 app.use("/api", [
   TrackRoutes, PlaylistRoutes,
-  AlbumRoutes, ArtistRoutes
+  AlbumRoutes, ArtistRoutes, ProgrammeRoutes,
+  NewsRoutes, AdvertRoutes
 ]);
 
 // Error Handler

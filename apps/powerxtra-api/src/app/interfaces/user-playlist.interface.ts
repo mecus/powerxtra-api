@@ -7,7 +7,7 @@ export interface IPlaylist {
   duration?: number;
   photos?: string; // string array of photos
   createdBy: string; // user name
-  owner: string; // userID
+  owner_id: string; // userID
   date_created: Date;
   status: string; // pending | disabled | enabled | deleted
   active: boolean;

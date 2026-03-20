@@ -36,10 +36,20 @@ AuthRoutes.post("/auth/create_user", async(req: Request, res: Response, next: Ne
   }
 });
 
-AuthRoutes.get("/auth/get_user/:id", async(req: Request, res: Response, next: NextFunction) => {
+AuthRoutes.post("/auth/create_user_without_auth", async(req: Request, res: Response, next: NextFunction) => {
   try{
-    const ID = req.params.id;
-    const user = await User.getUser(ID);
+    const data = req.body;
+    const user = await User.createUser(data);
+    res.status(201).json(user);
+  }catch(err){
+    next(err);
+  }
+});
+
+AuthRoutes.get("/auth/get_user/:uid", async(req: Request, res: Response, next: NextFunction) => {
+  try{
+    const UID = req.params.uid;
+    const user = await User.getUser(UID);
     res.status(200).json(user);
   }catch(err){
     next(err);
@@ -79,6 +89,11 @@ AuthRoutes.patch("/auth/update_user/:id", async(req: Request, res: Response, nex
 AuthRoutes.delete("/auth/delete_user/:id", async(req: Request, res: Response, next: NextFunction) => {
   try{
     const ID = req.params.id;
+    const user: any = await User.getUser(ID);
+    if(user?.uid){
+      const delAuth = await FirebaseUser.deleteUser(user.uid);
+      console.log("Deleted Auth:", delAuth);
+    }
     const deluser = await User.deleteUser(ID);
     res.status(200).json(deluser);
   }catch(err){

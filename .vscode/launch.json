@@ -18,6 +18,24 @@
         "${workspaceFolder}/apps/powerxtra-api/dist/**/*.(m|c|)js",
         "!**/node_modules/**"
       ]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug @y/radio with Nx",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["nx", "serve", "@y/radio"],
+      "env": {
+        "NODE_OPTIONS": "--inspect=9230"
+      },
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "skipFiles": ["<node_internals>/**"],
+      "sourceMaps": true,
+      "outFiles": [
+        "${workspaceFolder}/apps/radio/dist/**/*.(m|c|)js",
+        "!**/node_modules/**"
+      ]
     }
   ]
 }

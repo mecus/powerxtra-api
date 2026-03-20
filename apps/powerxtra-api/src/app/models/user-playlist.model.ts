@@ -13,7 +13,7 @@ const PlaylisStchema = new Schema<IPlaylist>({
   category: {type: String},
   tags: {type: String},
   createdBy: {type: String},
-  owner: {type: String},
+  owner_id: {type: String},
   date_created: {type: docType.Date},
   track_counts: {type: docType.Number},
   genres: {type: String},

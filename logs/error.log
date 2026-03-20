@@ -42,3 +42,6 @@
 {"level":"error","timestamp":"2026-03-10T17:24:42.176Z"}
 {"level":"error","timestamp":"2026-03-10T17:25:15.306Z"}
 {"level":"error","timestamp":"2026-03-10T18:29:01.469Z"}
+{"level":"error","timestamp":"2026-03-13T21:23:01.863Z"}
+{"level":"error","timestamp":"2026-03-13T21:26:39.571Z"}
+{"_message":"Advert validation failed","errors":{"tags":{"kind":"string","message":"Cast to string failed for value \"[ 'shopping' ]\" (type Array) at path \"tags\"","name":"CastError","path":"tags","reason":null,"stringValue":"\"[ 'shopping' ]\"","value":["shopping"],"valueType":"Array"}},"level":"error","message":"Advert validation failed: tags: Cast to string failed for value \"[ 'shopping' ]\" (type Array) at path \"tags\"","name":"ValidationError","timestamp":"2026-03-19T20:59:47.397Z"}

@@ -1,0 +1,26 @@
+{
+  "name": "@y/radio-e2e",
+  "version": "0.0.1",
+  "private": true,
+  "nx": {
+    "implicitDependencies": [
+      "@y/radio"
+    ],
+    "targets": {
+      "e2e": {
+        "executor": "@nx/jest:jest",
+        "outputs": [
+          "{projectRoot}/test-output/jest/coverage"
+        ],
+        "options": {
+          "jestConfig": "apps/radio-e2e/jest.config.cts",
+          "passWithNoTests": true
+        },
+        "dependsOn": [
+          "@y/radio:build",
+          "@y/radio:serve"
+        ]
+      }
+    }
+  }
+}

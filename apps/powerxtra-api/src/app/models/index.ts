@@ -1,6 +1,10 @@
 export { TrackModel } from "./track.model";
 export { ArtistModel } from "./artist.model";
 export { AlbumModel } from "./album.model";
-export { PlaylistModel } from "./playlist.model";
+export { PlaylistModel } from "./user-playlist.model";
 export { UserModel } from "./user.model";
 export { RadioQueueModel } from "./radio-queue.model";
+export { ProgrammeModel } from "./programme.model";
+export { PresenterModel } from "./presenter.model";
+export { AdvertModel } from "./advert.model";
+export { NewsModel } from "./news.model";

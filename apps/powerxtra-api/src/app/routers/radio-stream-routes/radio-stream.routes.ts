@@ -2,7 +2,7 @@ import express, { NextFunction, Request, Response } from "express";
 import { StreamManager } from "../../controllers";
 // import { warmUpBitrateCache } from "../../controllers/lradio-ive-stream/stream-manager";
 // import { jsonData } from "../../json-data";
-import { RadioQueue } from "../../controllers/lradio-ive-stream/radio-queue";
+import { RadioQueue } from "../../controllers/radio-live-stream/radio-queue";
 
 export const StreamRoutes = express.Router();
 
@@ -83,4 +83,4 @@ StreamRoutes.get("/listeners", (req: Request, res: Response, next: NextFunction)
 // to be remove in production
 // setTimeout(() => {
 //   streamManager.start();
-// }, 1000);
+// }, 6000);

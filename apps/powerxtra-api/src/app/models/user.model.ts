@@ -12,14 +12,15 @@ const UserSchema = new Schema<IUser> ({
   accountType: {type: String},
   category: {type: String},
   phone: {type: String},
-  photos: {type: String},
+  avatar: {type: String},
   start_date: {type: docType.Date},
   date_created: {type: docType.Date},
   createdBy: {type: String},
-  status: {type: String},
+  status: {type: String}, // active | suspended | deleted | pending
   active: {type: docType.Boolean},
   tags: {type: String},
   uid: {type: String},
+  roles: {type: String}, // presender | admin | upload | user
 }, {timestamps: true});
 
 

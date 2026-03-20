@@ -2,8 +2,6 @@
 import { UserModel } from "../models";
 import { IUser } from "../interfaces";
 
-
-
 export class User {
 
   static createUser(userData: any) {
@@ -19,11 +17,11 @@ export class User {
       }
     });
   }
-  static getUser(ID: string) {
+  static getUser(UID: string) {
 
     return new Promise(async(resolve, reject) => {
       try{
-        const User = await UserModel.findOne({_id: ID});
+        const User = await UserModel.findOne({uid: UID});
         resolve(User);
       }catch(err){
         resolve({error: err, status: "error"});

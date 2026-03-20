@@ -5,10 +5,10 @@ export interface IUser {
   first_name?: string;
   last_name?: string;
   email: string;
-  accountType?: string; // admin | user | super | general
+  accountType?: string; // admin | user | super | general | presenter
   phone?: string;
   start_date: Date;
-  photos?: string;
+  avatar?: string;
   createdBy?: string;
   date_created?: Date;
   status: string;
@@ -16,4 +16,5 @@ export interface IUser {
   tags?: string;
   uid?: string;
   category?: string; // internation | local
+  roles?: string;
 }

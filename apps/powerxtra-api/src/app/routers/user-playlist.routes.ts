@@ -4,6 +4,8 @@ import { Playlist } from "../controllers";
 
 export const PlaylistRoutes = express.Router();
 
+// Users playlist routes
+
 PlaylistRoutes.post("/playlist/create", async(req: Request, res: Response, next: NextFunction) => {
   try{
     const data = req.body;
